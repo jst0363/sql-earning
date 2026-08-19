@@ -1,0 +1,11 @@
+Installation
+
+
+Notes
+
+RDBMS - Relational Database Managment Systems
+
+Applications : 
+    Oracle, MySQL, Microsoft SQL Server, PostgreSQL
+
+

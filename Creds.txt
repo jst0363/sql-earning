@@ -1,0 +1,18 @@
+profile name: hello
+Server name; hello
+usernam : Holaa
+pass : Pass@123
+DB name : first-
+
+
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Pass@123" \
+  -p 1433:1433 -d --name sql1 \
+  mcr.microsoft.com/mssql/server:2022-latest
+
+
+dont consider this 
+====================================================================================================================
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourStrong@Passw0rd" \
+  -p 1433:1433 -d --name sql1 \
+  mcr.microsoft.com/mssql/server:2022-latest 
+====================================================================================================================
