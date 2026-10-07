@@ -9,3 +9,165 @@ Applications :
     Oracle, MySQL, Microsoft SQL Server, PostgreSQL
 
 
+SQL 
+Stuctured Query Language
+
+ANSI - Amercian National Standards Institute
+ISO - International Organization for Standardization
+
+SQL can can Execute queries, retrive data, insert, update, delete records, create new database, create new tables, create stored procedure, create view, set permissions on tables / procedure / views.
+
+Standards - SELECT, UPDATE, DELETE, INSERT, WHERE
+
+A column is a vertical entity in a table.
+
+A record is a horizontal entity in a table.
+A record, also called a row
+
+Vertical - | - Column 
+Horizontal - -- - Row
+
+SQL keywords are NOT case sensitive
+
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+SELECT * FROM <table_name>; - To get all the Data fromt the table
+
+Select Column1, Column2, ....
+FROM <table_name>;  - To get specific columns from the table 
+
+SELECT DISTINCT
+    - This statement is used to return only distinct (unique) values
+    - By using the COUNT() function with the DISTINCT keyword, we can count the number of unique countries.
+    - Eg.
+        SELECT COUNT(DISTINCT Country) FROM Customers;
+
+
+Where Clause
+    -The WHERE clause is used to filter records.
+    -The WHERE clause is used to extract only those records that fulfill a specific condition.
+
+    Operators in where clause
+        Operator	Description	Example
+        =	        Equal	
+        >	        Greater than	
+        <	        Less than	
+        >=	        Greater than or equal	
+        <=	        Less than or equal	
+        <>	        Not equal. Note: In some versions of SQL this operator may be written as !=	
+        BETWEEN	    Between a certain range	
+        LIKE	    Search for a pattern	
+        IN	        To specify multiple possible values for a column
+
+SQL Commands
+    - DDL - Data Definition Language
+        CREATE
+            -Create Table 
+        DROP
+            -Drop Table
+        ALTER
+            -Change the structure of an Existing Table 
+        TRUNCATE
+            -Remove all the DATA From the table
+
+    - DML - Data Manipulation Language
+        INSERT
+        UPDATE 
+        DELETE
+        MERGE
+
+    - DCL - Data Control Language
+        GRANT
+        REVOKE
+
+    - TCL - Transactional Control Language
+        COMMIT
+        ROLLBACK
+        SAVEPOINT
+
+    - DQL - Data Query Language
+        SELECT
+
+        COLUMN1 COLUMN2 COLUMN3 COLUMN4
+ROW1
+ROW2
+ROW3
+
+DATA Type
+    VARCHAR
+        Alphabets - A to Z / a to z 
+        Numbers 
+        Alpha Numberical values - Combination of both Numbers and Alphabets 
+        Special Characters
+
+    INT
+        Whole Number 
+    DATE 
+        Date Values in any format
+
+    FLOAT
+        Decimal Numbers only 
+
+    BOOLEAN
+        TRUE or FALSE
+
+    
+Constraints
+    CHECK -         Help to control the values being inserted into a table column
+    NOT NULL -      Ensure that the column value in every row is never black or empty or NULL
+    UNIQUE -        The column value in every row is should be unique
+    PRIMARY KEY -   Ensure that in column value in every row should be UNIQUE and has no NULL values 
+    FOREIGN KEY -   Help to form a parent child relationship between tables
+                    Child references column values from parent
+
+DROP 
+    Removes the database objects (such as Table, View, Function, etc.) from database
+    Eg. DROP TABLE <table_name>;
+        DROP FUNCTOIN <function_name>;
+
+ALTER
+    Modify structure of existing table 
+    can be used to Rename a table, Rename a column, Modify column data type, Add column, Remove columns, Add Constraints, Remove Constraints, etc.
+    Eg. ALTER TABLE <table_name> DROP COLUMN <column_name>;
+        ALTER TABLE <table_name> RENAME TO <new_table_name>;
+        ALTER TABLE <table_name> RENAME COLUMN <previous_column_name> TO <new_column_name>;
+
+DML 
+
+INSERT 
+    Load data into table 
+    Eg. INSERT INTO <table_name> (Column1, Column2, Column3)
+        VALUES
+            ('value1','value2','value3');
+
+        INSERT INTO <table_name> 
+        VALUES 
+            ('value1','value2','value3'),
+            ('value1','value2','value3');
+
+UPDATE 
+    Modify data in table
+    Eg. UPDATE <table_name>
+        SET column1 = 'new value'
+        WHERE column2 = 'value';
+
+        UPDATE <table_name>
+        SET column1 = 'new value', column3 = 'new value'
+        WHERE column2 = 'value';
+
+DELETE 
+    Delete Data from table
+    Eg. DELETE FROM <table_name>;
+        DELETE FROM <table_name> WHERE column1 = 'value';
+
+        
